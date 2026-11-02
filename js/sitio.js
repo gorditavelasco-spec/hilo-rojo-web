@@ -2,8 +2,8 @@
 class Site {
   constructor(root) {
     this.root = root;
-    // "Completo" = todas las animaciones; "Según el sistema" respeta la preferencia de movimiento reducido del visitante.
-    this.props = { motion: 'Según el sistema' };
+    // "Completo" = todas las animaciones siempre, igual que en el diseño (también en celulares con "Reducir movimiento").
+    this.props = { motion: 'Completo' };
     this.menu = false;
     const bar = root.querySelector('.bar'), btn = root.querySelector('.menu-btn'), nav = root.querySelector('.bar .nav');
     const setMenu = (open) => {
