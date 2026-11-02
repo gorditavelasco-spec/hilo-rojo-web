@@ -118,6 +118,9 @@ class Site {
       if (pg) pg.style.setProperty('--pp', p.toFixed(3));
       const tipX = window.innerWidth * 0.62 + p * this.hzDist;
       steps.querySelectorAll('.step').forEach((el) => el.classList.toggle('on', el.offsetLeft + 30 < tipX));
+    } else if (steps) {
+      // Celular: los pasos se encienden uno a uno al subir por la pantalla.
+      steps.querySelectorAll('.step').forEach((el) => el.classList.toggle('on', el.getBoundingClientRect().top < vh * 0.7));
     }
     this.r.querySelectorAll('[data-rv]:not(.in):not([data-intro])').forEach((el) => {
       const r = el.getBoundingClientRect();

@@ -161,6 +161,9 @@ body{margin:0;background:#F6F4F0}
 .hz .step{opacity:.3;transition:opacity .8s ease}
 .hz .step.on{opacity:1}
 .hz .step.on .st-rule{width:calc(100% - 52px);background:var(--red)}
+.armed:not(.hz) .step{opacity:.3;transform:translate3d(0,18px,0);transition:opacity .8s ease,transform .9s var(--ease)}
+.armed:not(.hz) .step.on{opacity:1;transform:none}
+.armed:not(.hz) .step.on .st-rule{width:calc(100% - 52px);background:var(--red)}
 
 /* ---------- equipo: palabras que se encienden ---------- */
 .team-st{font:300 clamp(26px,2.5vw,38px)/1.25 var(--serif);letter-spacing:-.015em;color:var(--ink);margin:0}
