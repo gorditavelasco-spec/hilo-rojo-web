@@ -435,6 +435,9 @@ body{margin:0;background:#F6F4F0}
 .av-end{position:relative;background:var(--red);color:#fff;overflow:hidden;margin-top:clamp(64px,8vw,120px)}
 .av-end::before{content:"";position:absolute;right:-8vw;bottom:-22vw;width:52vw;height:52vw;max-width:720px;max-height:720px;border-radius:50%;border:clamp(40px,6vw,90px) solid #fff;opacity:.12}
 .av-end .wrap{position:relative;z-index:1;padding-top:clamp(64px,8vw,112px);padding-bottom:clamp(64px,8vw,112px);display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(32px,6vw,96px);align-items:end}
+.av-end .wrap:has(>.av-end-txt:only-child){grid-template-columns:minmax(0,1fr)}
+.av-end-txt{max-width:760px}
+.av-end-txt p:not(.av-sign){font-size:clamp(18px,1.6vw,21px)!important}
 .av-end h2{font:900 clamp(44px,5.6vw,88px)/.88 var(--sans);letter-spacing:-.055em;text-transform:uppercase;margin:0}
 .av-end p{font:300 18px/1.65 var(--sans);color:#FFE6E9;margin:0 0 1.1em}
 .av-end a.lk{color:#fff;font-weight:600;background-image:linear-gradient(#fff,#fff);background-repeat:no-repeat;background-size:100% 1.5px;background-position:0 100%}
